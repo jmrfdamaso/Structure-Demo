@@ -1,0 +1,21 @@
+﻿Public Structure Customer
+    'Public members
+    Public Firstname As String
+    Public LastName As String
+    Public Email As String
+    ''' <summary>
+    ''' Overrides the default ToString method
+    ''' </summary>
+    ''' <returns>String</returns>
+    ''' <remarks>Returns the customer name and email address</remarks>
+    Public Overrides Function ToString() As String
+        Return Name & " (" & Email & ")"
+    End Function
+
+    'Name property
+    Public ReadOnly Property Name() As String
+        Get
+            Return Firstname & " " & LastName
+        End Get
+    End Property
+End Structure
